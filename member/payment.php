@@ -41,7 +41,7 @@ try {
 
     $payment->create($api);
 
-
+    session_start();
     // Generate and store hash
     $hash = md5($payment->getId());
     $_SESSION['paypal_hash'] = $hash;
